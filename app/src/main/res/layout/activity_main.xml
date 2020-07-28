@@ -27,6 +27,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
+<<<<<<< HEAD
     <!--Added in these TextViews to test notification-->
     <Button
         android:layout_width="match_parent"
@@ -36,5 +37,16 @@
         android:text="Send notification on Channel 1"
         app:layout_constraintTop_toTopOf="parent"
         tools:layout_editor_absoluteX="0dp" />
+=======
+    <TextView
+        android:id="@+id/pollingplace"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="60dp"
+        android:layout_marginLeft="60dp"
+        android:layout_marginTop="150dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+>>>>>>> 49d38f8f070c2bbe2edc45abc38de11a5e46633f
 
 </androidx.constraintlayout.widget.ConstraintLayout>
