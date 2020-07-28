@@ -16,12 +16,17 @@ import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
 import android.view.MenuItem;
+<<<<<<< HEAD
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+=======
+import android.widget.TextView;
+>>>>>>> 49d38f8f070c2bbe2edc45abc38de11a5e46633f
 
 import com.google.android.gms.gcm.Task;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+
 
 public class MainActivity extends AppCompatActivity {
     public static final String CHANNEL_ID = "homeChannelID";
@@ -37,6 +42,17 @@ public class MainActivity extends AppCompatActivity {
 
 
         setContentView(R.layout.activity_main);
+
+        //Get the Intent which started this activity (address string from Settings)
+        Intent intent = getIntent();
+        //Using the key to get the bundle (address)
+        String pollplace = intent.getStringExtra(Elections.pollingLocation);
+        System.out.println("pollplace: "+ pollplace);
+        if (pollplace != null) {
+            //TEST THAT ADDRESS IS RECEIVED FROM SETTINGS
+            TextView polltext = findViewById(R.id.pollingplace);
+            polltext.setText(pollplace);
+        }
 
         //Initialize bottom nav bar and select "Home"
         BottomNavigationView bottomNavView = findViewById(R.id.bot_nav);
@@ -64,8 +80,10 @@ public class MainActivity extends AppCompatActivity {
                 }
                 return false;
             }
+
         });
 
+<<<<<<< HEAD
         //Use to send notification
         //notificationManager = NotificationManagerCompat.from(this);
         //editTextTitle = findViewById(R.id.edit_notification_title);
@@ -160,4 +178,8 @@ public class MainActivity extends AppCompatActivity {
 
 
     }*/
+=======
+    }
+
+>>>>>>> 49d38f8f070c2bbe2edc45abc38de11a5e46633f
 }
